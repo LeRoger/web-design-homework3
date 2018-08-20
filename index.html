@@ -1,0 +1,241 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fakeloader@1.0.0/fakeLoader.css" type="text/css">
+
+    <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
+
+    <link rel="stylesheet" href="justifiedGallery.min.css">
+
+    <link rel="stylesheet" href="jInvertScroll.css">
+    
+
+    <script>
+
+    function getIP(){
+
+        const ipAPI = 'https://api.ipify.org?format=json';
+
+        swal.queue([{
+        title: 'Your public IP',
+        confirmButtonText: 'Show my public IP',
+        text:
+            'Your public IP will be received ' +
+            'via AJAX request',
+        showLoaderOnConfirm: true,
+        preConfirm: () => {
+            return fetch(ipAPI)
+            .then(response => response.json())
+            .then(data => swal.insertQueueStep(data.ip))
+            .catch(() => {
+                swal.insertQueueStep({
+                type: 'error',
+                title: 'Unable to get your public IP'
+                })
+            })
+        }
+        }])
+    }
+       
+    </script>
+
+    <style> 
+        .wanker {
+        /* Full-screen takeover… */
+        background: #000;
+        color: #FFF;
+        display: none;
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2014;
+        }
+    
+        .wanker-content {
+        /* Additional design… */
+        color:orange;
+        }
+
+
+        .sectionscroll {
+            position: fixed;	/* All scrollable elements have to be position:fixed */
+            top: 0;	        /* Make it stick to the bottom (or top) */
+            width: 2000px;	    /* I recommend to assign the width in px, prevents preloading issues */
+        }
+
+    </style>
+    
+    <title>Homework week 3</title>
+  </head>
+
+  <body>
+      
+      <div id="fakeLoader"></div>
+
+      <div class="wanker" data-wanker>
+        <div class="wanker-content">
+            <h1>The web was meant to be read, not squished.</h1>
+            <p>Prevent excessive browser resizing and get people back to reading.</p>
+        </div>
+      </div>
+
+
+      <header>
+
+        <div>
+            <p class="sectionscroll">
+                <img src="banner1.webp" height="400px" width="2000px" />
+            </p>
+        </div>
+        
+      </header>
+
+      <section>
+        <div id="mygallery" >
+            <a href="effel.jpeg">
+                <img alt="Title 1" src="effel.jpeg"/>
+                <div class="caption">
+                    I'm the eiffel tower
+                </div>
+            </a>
+            <a href="manonrock.jpeg">
+                <img alt="Title 2" src="manonrock.jpeg"/>
+                <div class="caption">
+                    Man standing on top of a rock
+                </div>
+            </a>
+            <a href="trainstation.jpeg">
+                <img alt="Title 1" src="trainstation.jpeg"/>
+                <div class="caption">
+                    At the train station
+                </div>
+            </a>
+            <a href="map.jpeg">
+                <img alt="Title 2" src="map.jpeg"/>
+                <div class="caption">
+                    World map
+                </div>
+            </a>
+            <a href="colorado.jpeg">
+                <img alt="Title 1" src="colorado.jpeg"/>
+            </a>
+            <a href="bus.jpeg">
+                <img alt="Title 2" src="bus.jpeg"/>
+            </a>
+
+            <a href="effel.jpeg">
+                    <img alt="Title 1" src="effel.jpeg"/>
+            </a>
+            <a href="manonrock.jpeg">
+                <img alt="Title 2" src="manonrock.jpeg"/>
+            </a>
+            <a href="trainstation.jpeg">
+                <img alt="Title 1" src="trainstation.jpeg"/>
+            </a>
+            <a href="map.jpeg">
+                <img alt="Title 2" src="map.jpeg"/>
+            </a>
+            <a href="colorado.jpeg">
+                <img alt="Title 1" src="colorado.jpeg"/>
+            </a>
+            <a href="bus.jpeg">
+                <img alt="Title 2" src="bus.jpeg"/>
+            </a>
+            <a href="effel.jpeg">
+                <img alt="Title 1" src="effel.jpeg"/>
+            </a>
+            <a href="manonrock.jpeg">
+                <img alt="Title 2" src="manonrock.jpeg"/>
+            </a>
+            <a href="trainstation.jpeg">
+                <img alt="Title 1" src="trainstation.jpeg"/>
+            </a>
+            <a href="map.jpeg">
+                <img alt="Title 2" src="map.jpeg"/>
+            </a>
+            <a href="colorado.jpeg">
+                <img alt="Title 1" src="colorado.jpeg"/>
+            </a>
+            <a href="bus.jpeg">
+                <img alt="Title 2" src="bus.jpeg"/>
+            </a>
+
+            <a href="effel.jpeg">
+                    <img alt="Title 1" src="effel.jpeg"/>
+            </a>
+            <a href="manonrock.jpeg">
+                <img alt="Title 2" src="manonrock.jpeg"/>
+            </a>
+            <a href="trainstation.jpeg">
+                <img alt="Title 1" src="trainstation.jpeg"/>
+            </a>
+            <a href="map.jpeg">
+                <img alt="Title 2" src="map.jpeg"/>
+            </a>
+        </div>
+        
+    </section>
+
+ 
+    <footer>
+        <div>
+            <button type="button" class="btn btn-primary" onclick="getIP()">Get IP</button>
+            <button type="button" class="btn btn-secondary">button 2</button>
+        </div>
+    </footer>
+
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    
+    <script src="sweetalert2/dist/sweetalert2.all.min.js"></script>
+
+    <script src="jquery.justifiedGallery.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery.fakeloader@1.0.0/dist/jquery.fakeloader.min.js"></script>
+    
+    <script src="jquery.wanker.min.js"></script>
+
+    <script src="jquery.jInvertScroll.js"></script>
+
+    <script> 
+        $("#fakeLoader").fakeLoader();
+        ScrollReveal().reveal('.div', { delay: 600, duration: 1200 }); 
+    </script>
+    
+    <Script>
+        $("#mygallery").justifiedGallery();
+    </Script>
+
+    <script>
+        $(function() {
+          $('[data-wanker]').wanker();
+        });
+    </script>
+
+    <script>
+        $.jInvertScroll(['p']);
+    </script>
+
+  </body>
+</html>
+
+
+
+
+

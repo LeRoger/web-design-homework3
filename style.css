@@ -1,0 +1,21 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-size: 14px; 
+  }
+
+  header { 
+    height: 400px; 
+    background-color: none; 
+  }
+  
+  .banner1-img {
+    height: inherit;
+   /* width: 1170px; */     /* 1610px; */
+    margin: 0 auto;
+    background-image: url(banner1.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
